@@ -12,16 +12,17 @@
 	<p class="description">Never use an insecure password again.</p>
 	<button id="generateButton">Generate passwords</button>
 	<div class="checkboxContainer">
-		<div> <label>enable numbers </lable><input id="numberOption" type="checkbox" checked/></div>
-	    <div> <label>enable signs </lable><input id="signOption" type="checkbox" checked/> </div>
+		<div> <label>enable numbers </lable><input id="numberOption" type="checkbox" checked /></div>
+		<div> <label>enable signs </lable><input id="signOption" type="checkbox" checked /> </div>
+		<div> <label>number of characters <input id="passwordLength" type="number" value="15" min="0" /> </div>
 	</div>
 	<div class="hr"></div>
-  <spanclass="description">click on the password to copy to clipboard</span>
+	<span class="description">click on the password to copy to clipboard</span>
 	<div class="passwordExContainer">
 		<div id="passwordExOne"></div>
 		<div id="passwordExTwo"></div>
 	</div>
-  <p id="isCopiedText"></p>
+	<p id="isCopiedText"></p>
 </body>
 <script src="index.js"></script>
 
