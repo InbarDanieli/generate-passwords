@@ -2,6 +2,7 @@ const characters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
   "/"];
 
 let newArr = characters
+let passLength = 15
 
 const generateButton = document.getElementById("generateButton")
 const passwordExOne = document.getElementById("passwordExOne")
@@ -9,6 +10,7 @@ const passwordExTwo = document.getElementById("passwordExTwo")
 const numberOption = document.getElementById("numberOption")
 const signOption = document.getElementById("signOption")
 const isCopiedText = document.getElementById("isCopiedText")
+const passwordLength = document.getElementById("passwordLength")
 
 function testDisabled() {
   const numberEnable = numberOption.checked
@@ -40,10 +42,14 @@ signOption.addEventListener("change", (event) => {
 })
 
 
+passwordLength.addEventListener("change", () => {
+  passLength = passwordLength.value
+})
+
 
 function generatePassword() {
   let password = ""
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < passLength; i++) {
     password += newArr[Math.floor(Math.random() * newArr.length)]
   }
   return password
